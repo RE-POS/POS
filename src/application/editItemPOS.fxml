@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.editItemController">
+   <children>
+      <Button id="backEditButton" fx:id="back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backHome" text="Back" />
+      <Button id="saveItem" fx:id="saveItem" layoutX="14.0" layoutY="230.0" mnemonicParsing="false" onAction="#saveItem" text="Save" />
+      <TextField id="itemNameBox" fx:id="itemNameBox" layoutX="14.0" layoutY="59.0" promptText="Enter Item Name" />
+      <TextField id="itemNumberBox" fx:id="itemNumberBox" layoutX="14.0" layoutY="100.0" promptText="Enter Item Number" />
+      <TextField id="itemCostBox" fx:id="itemCostBox" layoutX="14.0" layoutY="142.0" promptText="Enter Item Cost" />
+      <TextField id="itemStockBox" fx:id="itemStockBox" layoutX="14.0" layoutY="188.0" promptText="Enter Item Stock" />
+      <Button fx:id="select" layoutX="343.0" layoutY="273.0" mnemonicParsing="false" onAction="#editItem" text="Edit Item" />
+      <ListView fx:id="listView" layoutX="345.0" layoutY="41.0" onEditStart="#displayItems" onMouseClicked="#displayItems" prefHeight="227.0" prefWidth="166.0" />
+      <Button layoutX="428.0" layoutY="273.0" mnemonicParsing="false" onAction="#removeItem" text="Remove Item" />
+   </children>
+</Pane>

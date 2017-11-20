@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.POSHomeController">
+   <children>
+      <Button fx:id="editAddButton" layoutX="42.0" layoutY="96.0" mnemonicParsing="false" onAction="#goToEditAddItem" text="Add/ Edit Item" />
+      <Button layoutX="508.0" layoutY="42.0" mnemonicParsing="false" text="Login" />
+      <Button fx:id="pOS" layoutX="47.0" layoutY="23.0" mnemonicParsing="false" onAction="#goToPOS" text="Point of Sale" />
+      <Button layoutX="42.0" layoutY="200.0" mnemonicParsing="false" text="Reciept Viewer" />
+   </children>
+</Pane>
