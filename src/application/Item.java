@@ -77,7 +77,10 @@ public class Item extends Object implements Serializable
 		this.stock=stock;
 	}
 	public void removeStock(int sold) {
-		this.stock-=sold;
+		if(stock>0) {
+			this.stock-=sold;
+		}
+		
 	}
 	public void addStock(int added) {
 		this.stock+=added;

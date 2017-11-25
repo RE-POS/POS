@@ -28,6 +28,8 @@ public class Main extends Application {
 		itemList=new ItemList(file);
 		itemList.populate();
 		cart= new Cart(file, itemList);
+		//cart.addItemCart(itemList.getItem(1), 2);
+		//cart.addItemCart(itemList.getItem(4), 5);
 		launch(args);
 	}
 	@Override

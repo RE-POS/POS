@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class POSHomeController {
 
@@ -20,6 +21,7 @@ public void setMain(Main main) {
 	}
 	public void goToPOS() throws IOException {
 		main.POSMain();
+		
 	}
 
 }

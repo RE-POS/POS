@@ -14,8 +14,17 @@
       <TextField id="itemNumberBox" fx:id="itemNumberBox" layoutX="14.0" layoutY="100.0" promptText="Enter Item Number" />
       <TextField id="itemCostBox" fx:id="itemCostBox" layoutX="14.0" layoutY="142.0" promptText="Enter Item Cost" />
       <TextField id="itemStockBox" fx:id="itemStockBox" layoutX="14.0" layoutY="188.0" promptText="Enter Item Stock" />
-      <Button fx:id="select" layoutX="343.0" layoutY="273.0" mnemonicParsing="false" onAction="#editItem" text="Edit Item" />
-      <ListView fx:id="listView" layoutX="345.0" layoutY="41.0" onEditStart="#displayItems" onMouseClicked="#displayItems" prefHeight="227.0" prefWidth="166.0" />
-      <Button layoutX="428.0" layoutY="273.0" mnemonicParsing="false" onAction="#removeItem" text="Remove Item" />
+      <Button fx:id="select" layoutX="344.0" layoutY="324.0" mnemonicParsing="false" onAction="#editItem" text="Edit Item" />
+      <Button layoutX="429.0" layoutY="324.0" mnemonicParsing="false" onAction="#removeItem" text="Remove Item" />
+      <Label fx:id="alreadyExists" layoutX="185.0" layoutY="104.0" textFill="#ff2121" />
+      <TableView fx:id="itemView" layoutX="354.0" layoutY="42.0" prefHeight="279.0" prefWidth="166.0">
+        <columns>
+          <TableColumn fx:id="itemNameCol" prefWidth="125.0" text="Item Name" />
+          <TableColumn fx:id="itemNumberCol" prefWidth="39.0" text="ID" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
    </children>
 </Pane>

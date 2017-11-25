@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -57,10 +58,10 @@
          <left>
             <VBox prefHeight="372.0" prefWidth="208.0" BorderPane.alignment="CENTER">
                <children>
-                  <TableView prefHeight="292.0" prefWidth="208.0">
+                  <TableView fx:id="allItems" onMouseClicked="#addToCart" prefHeight="292.0" prefWidth="208.0">
                     <columns>
-                      <TableColumn prefWidth="145.0" text="Name" />
-                      <TableColumn prefWidth="62.0" text="Quantity" />
+                      <TableColumn fx:id="itemNameList" prefWidth="145.0" text="Name" />
+                      <TableColumn fx:id="stock" prefWidth="62.0" text="Stock" />
                     </columns>
                   </TableView>
                   <Button fx:id="home" mnemonicParsing="false" onAction="#goHome" text="Home" />
@@ -70,14 +71,17 @@
          <right>
             <VBox prefHeight="372.0" prefWidth="194.0" BorderPane.alignment="CENTER">
                <children>
-                  <TableView prefHeight="249.0" prefWidth="194.0">
+                  <TableView fx:id="cartTable" editable="true" onMouseClicked="#removeFromCart" onSort="#fillCart" prefHeight="249.0" prefWidth="194.0">
                     <columns>
-                      <TableColumn prefWidth="54.0" text="Quantity" />
-                      <TableColumn prefWidth="77.0" text="Name" />
-                        <TableColumn prefWidth="61.0" text="Price" />
+                      <TableColumn fx:id="quantity" prefWidth="56.0" text="Quantity" />
+                      <TableColumn fx:id="itemName" prefWidth="90.0" text="Name" />
+                        <TableColumn fx:id="totalCost" prefWidth="46.0" text="Total" />
                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
                   </TableView>
-                  <Label alignment="CENTER" prefHeight="58.0" prefWidth="194.0" text="Total: " />
+                  <Label fx:id="subTotal" alignment="CENTER" prefHeight="58.0" prefWidth="194.0" text="Total: " />
                </children>
             </VBox>
          </right>
@@ -148,14 +152,17 @@
             </VBox>
          </center>
          <top>
-            <HBox prefHeight="42.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+            <HBox focusTraversable="true" prefHeight="37.0" prefWidth="444.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextField prefHeight="27.0" prefWidth="209.0" promptText="Search for Item">
+                  <TextField prefHeight="27.0" prefWidth="209.0" promptText="Search for Item" snapToPixel="false">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </TextField>
                </children>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
             </HBox>
          </top>
       </BorderPane>
