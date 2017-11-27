@@ -79,18 +79,19 @@ public class Cart {
 					int amount=itemArray.get(1).get(i)-1;
 					this.itemArray.get(1).remove(i);
 					this.itemArray.get(1).add(i, amount);
-					System.out.println(amount);
 					Item item=findItem(itemNumber);
-					cartTotal-=item.getCost();
+					this.cartTotal-=item.getCost();
 					cartList.get(i).setQuantity(amount);
+					cartList.get(i).setTotalCost(cartList.get(i).getTotalCost()-item.getCost());
 					
 					}
 				else {
 					itemArray.get(0).remove(i);
 					Item item=findItem(itemNumber);
-					cartTotal-=item.getCost()*itemArray.get(1).get(i);
+					this.cartTotal-=item.getCost();
 					itemArray.get(1).remove(i);
 					cartList.remove(i);
+					
 				}
 			}
 			

@@ -59,27 +59,27 @@ public class POSMainController {
 			quantity.setCellValueFactory(new PropertyValueFactory<cartList,String>("quantity"));
 			itemName.setCellValueFactory(new PropertyValueFactory<cartList,String>("itemName"));
 			totalCost.setCellValueFactory(new PropertyValueFactory<cartList,String>("totalCost"));
-			
 		}
-		main.cart.printCart();
 		cartTable.setItems(data);
 		getTotal();
 
 	}
 	public void addToCart() {
+		if(!(allItems.getSelectionModel().isEmpty())){
 		Item item=allItems.getSelectionModel().getSelectedItem();
 		Main.cart.addItemCart(item, 1);
 		Main.itemList.getItem(item.getItemNumber()).removeStock(1);
 		fillCart();
 		getTotal();
 		showAllItems();
+		}
 	}
 	public void emptyCart() {
 		Main.cart.emptyCart();
 	}
 	public void getTotal() {
+
 		subTotal.setText("Subtotal: $"+Double.toString(Main.cart.getCartTotal())+"0");
-		
 	}
 	public void removeFromCart(){
 		if(!(cartTable.getSelectionModel().getSelectedItem()==null)){
