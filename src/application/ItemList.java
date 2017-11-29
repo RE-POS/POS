@@ -45,10 +45,6 @@ public class ItemList {
 			}
 			else {System.out.println("No Files Found");}
 	
-		
-
-		
-		
 		}
 	}
 	public void addNewItem(Item item) throws IOException {

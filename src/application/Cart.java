@@ -26,8 +26,7 @@ public class Cart {
 		ArrayList<Integer>itemNumber=new ArrayList<Integer>();
 		ArrayList<Integer>itemQuantity=new ArrayList<Integer>();
 		itemArray.add(itemNumber);
-		itemArray.add(itemQuantity);
-		
+		itemArray.add(itemQuantity);	
 	}
 	public ArrayList<Integer> getItemNumbers(){
 		return itemArray.get(0);
@@ -104,7 +103,8 @@ public class Cart {
 		this.cartList = cartList;
 	}
 	public void emptyCart() {
-		itemArray.clear();
+		itemArray.get(0).clear();
+		itemArray.get(1).clear();
 		cartList=new ArrayList<cartList>();
 		cartTotal=0.0;
 	}

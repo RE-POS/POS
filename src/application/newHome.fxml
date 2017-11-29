@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.POSHomeController">
+   <left>
+      <Pane prefHeight="400.0" prefWidth="108.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="pOS" layoutX="13.0" layoutY="54.0" mnemonicParsing="false" onAction="#goToPOS" text="Point of Sale" />
+            <Button fx:id="editAddButton" layoutX="6.0" layoutY="118.0" mnemonicParsing="false" onAction="#goToEditAddItem" text="Add/Edit Items" />
+            <Button fx:id="employeeButton" layoutX="18.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToEmployeeTab" text="Employees" />
+            <Button fx:id="logOutButton" layoutX="27.0" layoutY="299.0" mnemonicParsing="false" onAction="#logOut" text="Logout" />
+            <Label fx:id="currentEmployee" layoutX="6.0" layoutY="6.0" prefHeight="17.0" prefWidth="174.0" />
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <Pane fx:id="pane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

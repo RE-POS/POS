@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
 <?import java.lang.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.POSHomeController">
    <children>
       <Button fx:id="editAddButton" layoutX="42.0" layoutY="96.0" mnemonicParsing="false" onAction="#goToEditAddItem" text="Add/ Edit Item" />
-      <Button layoutX="508.0" layoutY="42.0" mnemonicParsing="false" text="Login" />
       <Button fx:id="pOS" layoutX="47.0" layoutY="23.0" mnemonicParsing="false" onAction="#goToPOS" text="Point of Sale" />
-      <Button layoutX="42.0" layoutY="200.0" mnemonicParsing="false" text="Reciept Viewer" />
+      <Button fx:id="employeeButton" layoutX="52.0" layoutY="188.0" mnemonicParsing="false" onAction="#goToEmployeeTab" text="Employees" />
+      <Button fx:id="logOutButton" layoutX="59.0" layoutY="290.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
+      <Label fx:id="currentEmployee" alignment="CENTER" layoutX="355.0" layoutY="15.0" prefHeight="17.0" prefWidth="195.0" textAlignment="CENTER" wrapText="true" />
+      <Pane fx:id="pane" layoutX="150.0" layoutY="14.0" prefHeight="373.0" prefWidth="436.0" />
    </children>
 </Pane>

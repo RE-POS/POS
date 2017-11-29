@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LogInController">
+   <children>
+      <Button id="LogInButton" fx:id="LogInButton" layoutX="275.0" layoutY="218.0" mnemonicParsing="false" onAction="#enterLogIn" text="Log In" />
+      <TextField id="LogInTextField" fx:id="LogInTextField" layoutX="226.0" layoutY="145.0" />
+      <Label fx:id="loginFailed" layoutX="258.0" layoutY="183.0" prefHeight="17.0" prefWidth="84.0" textFill="#ff3d3d" />
+      <Label layoutX="185.0" layoutY="81.0" text="Welcome to Electronics-R-Us">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
