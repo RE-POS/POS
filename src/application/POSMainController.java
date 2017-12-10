@@ -2,7 +2,6 @@ package application;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.TreeMap;
 
 import javafx.collections.FXCollections;
@@ -16,7 +15,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class POSMainController {
+public class    POSMainController {
 	private Main main;
 	@FXML private TableView<cartList> cartTable;
 	@FXML private Button home;
@@ -63,7 +62,7 @@ public class POSMainController {
 		ObservableList<Item> data=FXCollections.observableArrayList();
 		ArrayList<Item> items=Main.itemList.getItemList();
 
-		for(int i=0;i<main.itemList.size();i++) {
+		for(int i=0;i<Main.itemList.size();i++) {
 			
 			data.add(items.get(i));
 			itemNameList.setCellValueFactory(new PropertyValueFactory<Item,String>("itemName"));
@@ -87,15 +86,21 @@ public class POSMainController {
 		getTotal();
 
 	}
+	@FXML
+    public void initialize()
+    {
+        searchBarEventHandler();
+        addToCart();
+    }
 	public void addToCart() {
-        if(!(allItems.getSelectionModel().isEmpty())){
+      /*  if(!(allItems.getSelectionModel().isEmpty())){
         Item item=allItems.getSelectionModel().getSelectedItem();
         Main.cart.addItemCart(item, 1);
         Main.itemList.getItem(item.getItemNumber()).removeStock(1);
         fillCart();
         getTotal();
         showAllItems();
-        }
+        }*/
         allItems.setRowFactory(tv -> {
             TableRow<Item> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
@@ -170,10 +175,7 @@ public class POSMainController {
 
         });
     }
-    @FXML public void initialize()
-    {
-        searchBarEventHandler();
-    }
+
     private QuickAddMatrix quickAddMatrix = new QuickAddMatrix();
 
     public TreeMap<Integer, Button> createQuickAddList()
